@@ -6,10 +6,10 @@
         printf("Scrivi un numero");
         scanf("%d", &n1);
         if (n1%3==n1%5)
-        printf("Il valore inserito è divisibile per 3 sia per 5");
+            printf("Il valore inserito è divisibile per 3 sia per 5");
         else
         if (n1%3!=n1%5)
-        printf("Il valore non è divisibile per 3 o 5 oppure per tutti e due");
+            printf("Il valore non è divisibile per 3 o 5 oppure per tutti e due");
         return 0;
     }
 
