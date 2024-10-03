@@ -8,9 +8,9 @@ int main(){
     int medio;
     int maggiore;
     printf("Scrivi un valore");
-    scanf("d%:", &a);
+    scanf("%d:", a);
     printf("Scrivi un valore");
-    scanf("%d:", &b);
+    scanf("%d:", b);
     printf("Scrivi un valore";
     scanf("%d:", c);
     a=0;
@@ -38,14 +38,22 @@ int main(){
     else
         If (c<a&&a<b)
         c==minore
-    }
-    if (a==maggiore)
     
-
-
-
-
-    }
+    if (a==maggiore)
+        a=c;
+    if (a==minore)
+        a=a;
+    if (b==maggiore)
+        b=c;
+    if (b==minore)
+        b=a;
+    if (c==maggiore)
+        c=c;
+    if (c==minore)
+        c=a;
+    printf("I trew valore in ordine sono: %d, %d, %d", c, b, a);
+    return 0;
+    
 
 
 }
