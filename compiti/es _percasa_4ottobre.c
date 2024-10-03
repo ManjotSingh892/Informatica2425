@@ -5,7 +5,7 @@
         int n2;
         int perimetro;
         int area;
-        int quadrilater;
+        int quadrilatero;
         printf("Scrivi un valore")
         scanf("%d", &n1)
         printf("Scrivi un valore")
