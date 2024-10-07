@@ -35,6 +35,6 @@ int main() {
                     printf("C è il massimo\n");
 
     }
-            printf("La media aritmetica è: %f\n", media);
+            printf("La media aritmetica è: %.2f\n", media);
     return 0;
 }
