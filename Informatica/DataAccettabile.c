@@ -38,7 +38,7 @@
             else{
                 if(mm==11 || mm==4 ||mm==6 ||mm==9){
                     if (gg>=1 && gg<=30){
-                        printf("La data è accettabile")
+                        printf("La data è accettabile");
                     }
                     else{
                         printf("la data non è accettabile");
