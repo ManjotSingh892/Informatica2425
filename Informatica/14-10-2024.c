@@ -7,7 +7,6 @@ int main(){
     int ore2;
     int minuti2;
     int secondi2;
-
         printf("Inserisci le ore del primo orario\n");
             scanf("%d", &ore1);
         printf("Insersisci i minuti del primo orario\n");
@@ -20,36 +19,35 @@ int main(){
             scanf("%d", &minuti2);
         printf("Inserisci i secondi del secondo orario\n");
             scanf("%d", &secondi2);
-        if (ore1>59||ore2>59||minuti1>59||minuti2>59||secondi1>59||secondi2>59)
+        if (ore1>23||ore2>23||minuti1>59||minuti2>59||secondi1>59||secondi2>59)
             printf("Una delle due date non è accettabile\n");
         if (ore1<1||ore2<1||minuti1<1||minuti2<1||secondi1<1||secondi2<1)
             printf("Una delle due date non è accettabile\n");
-        
         if (ore1>ore2){
             printf("L'orario numero 2 viene prima\n");
         }
-        if (ore1>ore2) {
+        if (ore1==ore2) {
             if (minuti1>minuti2)
                 printf("L'orario numero 2 viene prima\n");
         }
-        if (ore1>ore2){
-            if (minuti1>minuti2)
+        if (ore1==ore2){
+            if (minuti1==minuti2)
                 if (secondi1>secondi2)
                     printf("L'orario numero 2 viene prima\n");
         }
          if (ore1<ore2){
             printf("L'orario numero 1 viene prima\n");
         }
-        if (ore1<ore2) {
+        if (ore1==ore2) {
             if (minuti1<minuti2)
                 printf("L'orario numero 1 viene prima\n");
         }
-        if (ore1<ore2){
-            if (minuti1<minuti2)
+        if (ore1==ore2){
+            if (minuti1==minuti2)
                 if (secondi1<secondi2)
                     printf("L'orario numero 1 viene prima\n");
         }
-   
-
+        if(ore1==ore2&&minuti1==minuti2&&secondi1==secondi2)
+            printf("Le date sono uguali\n");
     return 0;
 }
