@@ -1,0 +1,14 @@
+    if(numerodecimale=>0&&numerodecimale=<63){
+        quoz=numerodecimale
+        bit5=(quoz%2)
+        quoz=(quoz/2)
+        bit4=(quoz%2)
+        quoz=(quoz/2)
+        bit3=(quoz%2)
+        quoz=(quoz/2)
+        bit2=(quoz%2)
+        quoz=(quoz/2)
+        bit1=(quoz%2)
+        if(quoz==0)
+        bit0=()
+    }
