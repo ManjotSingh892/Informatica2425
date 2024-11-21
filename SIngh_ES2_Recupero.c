@@ -33,7 +33,7 @@ int main(){
                                 printf("Il multiplo è %d\n", multi); 
                             }
                             else{
-                                    printf("Non ce ne sono altri");
+                                    printf("Non ce ne sono altri\n");
                                 }
                                 if(multi%c==0){
                                 multi=multi/c;
@@ -41,7 +41,7 @@ int main(){
                                 }
                                 else
                                 {
-                                    printf("Non ce ne sono altri");
+                                    printf("Non ce ne sono altri\n");
                                 }
                 }
             }
