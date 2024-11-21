@@ -11,12 +11,38 @@ int main(){
         scanf("%d", &n);
         printf("Inserisci un numero tra 1 e 9\n");
         scanf("%d", &c);
-            if(n!=0&&n>0&&n<20&&c>=1&&c<=9){
+            if(n!=0&&n>0&&n<=20&&c>=1&&c<=9){
                 if(multi==0){
-                    if(n%c){
+                    if(n%c==0){
                         multi=n/c;
-                        printf("Il mulriplo è %d\n", multi);
+                        printf("Il multiplo è %d\n", multi);
                     }
+                    else{
+                        printf("Non ce ne sono altri\n");
+                    }
+                        if(multi%c==0){
+                            multi=multi/c;
+                            printf("Il multiplo è %d\n", multi);
+                        } 
+                        else
+                        {
+                            printf("Non ce ne sono altri\n");
+                        }
+                            if(multi%c==0){
+                                multi=multi/c;
+                                printf("Il multiplo è %d\n", multi); 
+                            }
+                            else{
+                                    printf("Non ce ne sono altri");
+                                }
+                                if(multi%c==0){
+                                multi=multi/c;
+                                printf("Il multiplo è %d\n", multi); 
+                                }
+                                else
+                                {
+                                    printf("Non ce ne sono altri");
+                                }
                 }
             }
             else
