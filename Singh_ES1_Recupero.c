@@ -51,16 +51,15 @@ int main(){
 
                 }
                     if(mese==2){
+                        if(giorni>10){
+                            giorni=giorni+20-29;
+                            mese=mese+1;
+                            if(mese==12&&giorni>10){
+                                anno=anno+1;
+                                printf("La data di consegna è: %d_%d_%d\n", giorni, mese, anno);   
+                            }
 
-                    if(giorni>10){
-                        giorni=giorni+20-29;
-                        mese=mese+1;
-                        if(mese==12&&giorni>10){
-                            anno=anno+1;
-                            printf("La data di consegna è: %d_%d_%d\n", giorni, mese, anno);   
-                        }
-
-                }
+                    }
 
 
 
