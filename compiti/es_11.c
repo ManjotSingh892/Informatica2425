@@ -4,17 +4,19 @@ int main(){
     int n1=0;
     int n2=0;
 
-            while(n1<=0||n2<==0){
+            while(n1<=0||n2<=0){
                 printf("Inserisci un numero\n");
                 scanf("%d", &n1);
                 printf("Inserisci un numero\n");
                 scanf("%d", &n2);
-            }for(int prodotto=0; prodotto==n1*n2; ){
+                printf("Il prodotto è di %d\n\n\n", n1*n2);
+            }for(int prodotto=0; prodotto!=n1*n2; prodotto=prodotto+n1){
 
                 
-
+                printf("+%d", n1);
 
             }
+
 
         
 
