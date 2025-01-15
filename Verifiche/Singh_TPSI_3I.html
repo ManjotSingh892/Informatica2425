@@ -20,6 +20,7 @@
             }
             #parag{
                 text-align: left;
+                float: right;
             }
             
 
@@ -33,7 +34,7 @@
     <body>
         <div>
         <table id="tab">
-            <tr>
+            <tr style="background-color: green;">
                 <rowspan>
                     <th> </th>
                 </rowspan>
@@ -48,7 +49,7 @@
             <tr>
                 <coolspan>
                 <td> </td>
-                <td> </td>
+                <td style="background-color: yellow;"> </td>
                 </coolspan>
                 <td> </td>
            
@@ -89,15 +90,17 @@
                 <input type="email" id="lmail" name="lmail" placeholder="Marco@gmail.com"><br>
             </div>
             <div>
-                <label for="llingue">Lingue parlate:</label><br>
+                
                 <div>
-                    <label for="inglese">Inglese</label><br>
-                    <input type="radio" name="inglese" id="inglese">
-                    <label for="francese">Francese</label><br>
-                    <input type="radio" name="francese" id="francese">
-                    <label for="spagnolo">Spagnolo</label><br>
-                    <input type="radio" name="spagnolo id="spagnolo">
+                    <label for="llingue">Lingue parlate:</label><br>
+                    <label for="inglese">Inglese</label>
+                    <input type="radio" name="inglese" id="inglese"><br>
+                    <label for="francese">Francese</label>
+                    <input type="radio" name="francese" id="francese"><br>
+                    <label for="spagnolo">Spagnolo</label>
+                    <input type="radio" name="spagnolo id="spagnolo"><br>
                 </div>
+                <input type="reset">
             </div><br><br>
         </form>
 
