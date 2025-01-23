@@ -31,6 +31,8 @@ int main(){
         c=cifre;
     }while(cifre!=cifre2);
 
+    
+
         cifre2=0;
         cifre=0;
 
