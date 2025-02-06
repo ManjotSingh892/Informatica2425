@@ -19,7 +19,7 @@ int main(){
 long converti(int _n){
     int i;
     int quoziente=_n;
-    int cnt=1;
+    int cnt=0;
     int binario=0;
     int _conv=0;
     int resto=0;
@@ -36,7 +36,7 @@ long converti(int _n){
         while(quoziente!=0){
             resto=quoziente%2;
             quoziente=quoziente/2;
-            _conv=pow(10, cnt);
+            _conv+=resto*pow(10, cnt);
             cnt++; 
         }
 
