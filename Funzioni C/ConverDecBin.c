@@ -12,14 +12,7 @@ int main(){
             scanf("%d", &n);
             }while(n<=0||n>254);
         conv=converti(n);
-        pritnf("ld ", conv);
-
-        
-
-        
-
-
-
+        printf("%ld\n ", conv);
 
     return 0;
 }
@@ -37,6 +30,7 @@ long converti(int _n){
             }else{
                 binario=binario+(quoziente%2*10);
                 quoziente=quoziente/2;                 
+            }
             }*/
         
         while(quoziente!=0){
