@@ -3,12 +3,15 @@
 
 void equazione(float *a, float *b, float *c);
 void calcola_delta(float a, float b, float c, float *delta, float *x1, float *x2);
+int quadrante(int *quadrante);
 
 int main() {
     float a, b, c, delta, x1, x2;
+    int quadrante;
 
     equazione(&a, &b, &c);
     calcola_delta(a, b, c, &delta, &x1, &x2);
+    int quadrante(int quadrante);//errore 
 
     return 0;
 }
@@ -33,4 +36,8 @@ void calcola_delta(float a, float b, float c, float *delta, float *x1, float *x2
 
     printf("X1: %.2f\n", *x1);
     printf("X2: %.2f\n", *x2);
+}
+int quadrante(int *quadrante){
+
+
 }
