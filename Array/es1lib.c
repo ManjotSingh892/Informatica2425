@@ -7,7 +7,7 @@ Creazione di una libreria personale
 #define DIM 10
 
 int main(){
-    int vettore[DIM]={0}
+    int vettore[DIM]={0};
 
     richiediValori(vettore, DIM);
     stampaVett(vettore, DIM, '-');

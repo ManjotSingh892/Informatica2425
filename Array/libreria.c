@@ -4,16 +4,18 @@
 #include <stdio.h>
 #include "libreria.h"//prototipi delle funzioni
 
-void richiediValori(int vett[], int DIM){
-    int n=0;
+void richiediValori(int vett[], int dim){
+    int n=0, i=0;
 
-    for(int i=0; i<DIM; i++){
-        printf("Inserisci un valore: ");
+    while(i<dim){
+        printf("Inserisci un valore");
         scanf("%d", &n);
-        if(n%2==0)
-        vett[i]=n;
+        if(n%2==0){
+            vett[i]=n;
+            i++;
+        }
     }
-    return 0;
+
 }
 
 void stampaVett(int vett[], int dim, char sep){
