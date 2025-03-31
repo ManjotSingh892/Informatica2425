@@ -93,3 +93,9 @@ void scambioVettori(int vett1[], int vett2[], int dim){
 
 
 }
+void caricaVett(int vett[], int dim){
+    for(int i=0; i<dim; i++){
+        printf("Inserisci un valore");
+        scanf("%d", vett[i]);
+    }
+}

@@ -6,9 +6,11 @@ la somma maggiore è divisibile per un assegnato valor ek(con k diverso da 0)*/
 #include <time.h>
 #include <stdlib.h>
 #include "libreria.c"
+#define DIM 5
 
 int main(){
+    int vett[DIM];
+    caricaVett(vett, DIM);
 
 
-    
 }
