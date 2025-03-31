@@ -77,3 +77,19 @@ void riempiVettoreOrdinatoCasuale(int vett[], int dim, int minimo, int massimo) 
         vett[pos] = num;
     }
 }
+void caricaCasuale(int vett[], int dim, int min, int max){
+    srand(time(NULL));
+    for(int i=0; i<dim; i++){
+        vett[i]=rand()&(max-min)+min;
+    }
+}
+void scambioVettori(int vett1[], int vett2[], int dim){
+    int temp=0;
+    for(int i=0; i<dim; i++){
+        temp=vett1[i];
+        vett1[i]=vett2[i];
+        vett2[I]=temp;
+    }
+
+
+}
