@@ -88,14 +88,27 @@ void scambioVettori(int vett1[], int vett2[], int dim){
     for(int i=0; i<dim; i++){
         temp=vett1[i];
         vett1[i]=vett2[i];
-        vett2[I]=temp;
+        vett2[i]=temp;
     }
 
 
 }
 void caricaVett(int vett[], int dim){
+    printf("Inserisci un valore");
     for(int i=0; i<dim; i++){
-        printf("Inserisci un valore");
+
         scanf("%d", vett[i]);
+    }
+}
+void caricaBubble(int vett[], int dim){
+    int temp=0;
+    for(int i=0; i<dim-1;i++){
+        for(int j=0; j<dim-i-1; j++){
+            if(vett[j]>vett[j+1]){
+                temp=vett[j];
+                vett[j]=vett[j+1];
+                vett[j+1]=temp;
+            }
+        }
     }
 }
