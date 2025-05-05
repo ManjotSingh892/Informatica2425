@@ -97,7 +97,7 @@ void caricaVett(int vett[], int dim){
     printf("Inserisci un valore");
     for(int i=0; i<dim; i++){
 
-        scanf("%d", vett[i]);
+        scanf("%d", &vett[i]);
     }
 }
 void caricaBubble(int vett[], int dim){
@@ -111,4 +111,25 @@ void caricaBubble(int vett[], int dim){
             }
         }
     }
+}
+void scambioMinMax(int vett[], int dim){
+    int min, max, tmp, i_min, i_max;
+
+    min=vett[0];
+    max=vett[0];
+    for(int i=1; i<dim;i++){
+        if(vett[i]<min){
+            min=vett[i];
+            i_min=i;
+        }
+        if(vett[i]>max){
+            max=vett[i];
+            i_max=i;
+        }
+    }
+    vett[i_min]=max;
+    vett[i_max]=min;
+    
+
+
 }

@@ -56,3 +56,4 @@ void riempiVettoreOrdinatoCasuale(int vett[], int dim, int minimo, int massimo);
 void caricaCasuale(int vett[], int dim, int min, int max);
 void scambioVettori(int vett1[], int vett2[], int dim);
 void caricaBubble(int vett[], int dim);
+void scambioMinMax(int vett[vett], int dim);
