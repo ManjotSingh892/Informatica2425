@@ -11,30 +11,39 @@ Il programma deve permettere, tramite menù:
 
 #include <stdio.h>
 #include <stdlib.h>
-int array[];
-int *dim;
+int *array=NULL;
+int *dim=0;
+
+void realloc_funz();
 
 void menu(){
-    cost n=0;
+    int n=0;
     do{
+        printf("1.Aggiungere numero\n");
+        printf("2.Mostra\n");
+        printf("3.Cerca\n");
+        printf("4.Ordina\n");
+        printf("5.Elimina\n");
+        printf("6.Uscire\n");
+        scanf("%d", &n);
         switch (n)
         {
-        case n==1:
-            void realloc();
+        case 1:
+            realloc_funz();
             break;
-        case n==2:
-            void mostra();
+        case 2:
+            mostra();
             break;
-        case n==3:
-            void cerca();
+        case 3:
+            cerca();
             break;
-        case n==4:
-            void ordinamento();
+        case 4:
+            ordinamento();
             break;
-        case n==5:
-            void elimina();
+        case 5:
+            elimina();
             break;
-        case n==6:
+        case 6:
             return 0;
         
         default:
@@ -43,11 +52,12 @@ void menu(){
     }while(n>=1&&n<=6&&n!=6);
 }
 
-void realloc(){
+void realloc_funz(){
     int val=0;
     printf("Inserisci un numero nel array\n");
     scanf("%d", &val);
-    array = (int *)realloc(array, *val * sizeof(int));
+    array = (int *)realloc(array, (*dim + 1) * sizeof(int));
+    dim++;
     if(array==NULL){
         return 1;
     }
@@ -80,7 +90,7 @@ void cerca(){
 void ordinamento(){
     int temp=0;
     int cnt=0;
-    for(cnt<=(*dim*(*dim))){
+    do{
         for(int i=0; i<*dim; i++){
             if(array[i]>array[i+1]){
                 temp=array[i];
@@ -90,7 +100,7 @@ void ordinamento(){
                 cnt++;
             }
         }
-    }
+    }while(cnt<=(*dim*(*dim)));
 }
 
 void elimina(){
