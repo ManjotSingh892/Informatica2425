@@ -1,32 +1,36 @@
+body{
+    background-image: url("../MEDIA/margherita.jpg");
+}
+
 #introduzione{
     background-color: green;
-    font-style: italic;
     text-align: left;
     padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
+
+#contenuto{
+    display: flex;
+    margin-top: 1%;
+}
+
 #lista{
     background-color: white;
-    align-items: center;
-
-    margin-top: 1%;
-    margin-right: 87%;
-    
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    margin-left: 1%;
+    padding: 20px;
 }
+
 #paragrafi{
     background-color: white;
     padding-left: 1%;
-    margin-left: 25%;
-    margin-top: 1%;
+    margin-left: 2%;
+    padding: 20px;
 }
+
 #footer{
     background-color: green;
     text-align: center;
+    margin-top: 2%;
+    padding: 1%;
 }
-#immagine{
-
-}
-
