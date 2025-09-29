@@ -45,6 +45,7 @@ int* sommaMultipli(int *_vettore, int _n, int *somma){
             nuovoArray=(int*)realloc(nuovoArray, (cnt+1)*sizeof(int));
             nuovoArray[cnt]=_vettore[i];
             cnt++;
+           // printf("Dispari: %d ", nuovoArray[cnt]);
         }
     }
     return nuovoArray;
