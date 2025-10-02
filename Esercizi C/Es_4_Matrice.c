@@ -50,6 +50,15 @@ int* sommaMultipli(int *_vettore, int _n, int *somma){
     }
     return nuovoArray;
 }
+
+void stampaVettNuovo(int *nuovoArray, int _n){
+
+    printf("Array dispari: ");
+    for(int i=0; i<_n; i++){
+        printf("%d ", nuovoArray[i]);
+    }
+    printf("\n");
+}
 int main(){
     int *vettore=NULL;
     int *nuovoArray=NULL;
@@ -64,6 +73,7 @@ int main(){
     stampaVett(vettore, n);
     nuovoArray=sommaMultipli(vettore, n, &somma);
     printf("Somma dei multipli di, 3 è : %d\n", somma);
+    stampaVettNuovo(vettore, n);
     free(vettore);
     free(nuovoArray);
 }
