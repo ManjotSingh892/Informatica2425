@@ -12,6 +12,7 @@ Il programma deve permettere, tramite menù:
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int* Aggiungi(int *vettore, int n){
     int nuova_dim;
