@@ -21,6 +21,7 @@
         </style>
         <script>
             var dimchar=15;
+            var larghezza=400;
             function message(){
                 document.getElementById("output").innerHTML=text.value;
             }
@@ -36,7 +37,17 @@
             }
             function dezoomtext(){
                 dimchar--;
-                document.getElementById("output").style.fontSize=dimchar-"px";
+                document.getElementById("output").style.fontSize=dimchar+"px";
+            }
+
+            function allarga(){
+                larghezza+=50;
+                document.getElementById("output").style.width= larghezza + "px";
+            }
+
+            function diminuisci(){
+                larghezza-=50;
+                document.getElementById("output").style.width= larghezza + "px";
             }
         </script>
     </head>
@@ -50,6 +61,9 @@
             <input type="button" id="button2" value="Cambia colore" onclick="changecolor()"></input><br><br>
             <input type="button" id="button3" value="Ingrandisci il testo" onclick="zoomtext()"></input><br><br>
             <input type="button" id="button4" value="Diminuisci il testo" onclick="dezoomtext()"></input><br><br>
+            <input type="button" id="button5" value="Ingrandisci div" onclick="allarga()"></input><br><br>
+            <input type="button" id="button6" value="diminuisci div" onclick="diminuisci()"></input><br><br>
+
             <div id="output"></div>
         </form>
     </body>
