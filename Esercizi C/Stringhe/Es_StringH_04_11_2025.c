@@ -68,11 +68,28 @@ int Nome(string nome, int maxD){
 
 }
 
-int età(int anni){
+int età(int anni){      //va bene
     vettore anni;
-        anni= vettore[2]*10;
-        anni=anni + vettore[3];
+    vettore anni2;
+    anni2[0]=anni[2];
+    anni2[1]=anni[3];
 }
+
+int mese(){
+
+
+}
+
+int giorno(){
+
+
+}
+
+int Controllo(){
+
+    
+}
+
 
 int main(){
     string cognome;
