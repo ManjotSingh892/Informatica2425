@@ -15,13 +15,9 @@ void Malloc(string stringa, int dim){
     stringa=(char*)malloc(stringa, dim+1*sizeof(char));
 }
 
-
-
 void Realloc(string stringa, int NewDim){
     stringa=(char*)realloc(stringa, NewDim*sizeof(char));
 }
-
-
 
 int CodiceFiscale(string nome, string cognome, int anni, char mese, int giorno, vettore CodComune, char Controllo){
     int maxD=20;
@@ -49,27 +45,35 @@ int Cognome(string cognome, int maxD){     //Sistemare la funzione
             cntV++;
         }
     }
-
     for(int i=0; i<lenCognome; i++){
         if(cntC>2){
             
         }else if(cntV>2){
-            CCC[i]=cognome[i];
+            CCC[j++]=cognome[i];
         }
     }
     return cognome;
 }        
 
 
-
-
 int Nome(string nome, int maxD){
+    int lenNome=strlen(nome);
+    int cntCnome=0;
     fgets(nome, maxD, stdin);
+    for(int i=0; i<lenNome;i++){
+        if(nome[i]!='a'&&nome[i]!='e'&&nome[i]!='i'&&nome[i]!='o'&&nome[i]!='u'){
+            cntCnome++;
+        }
+    }
+    if(cntCnome>=4){
+        NNN[0]=nome[0];
+        NNN[2]=nome[2];  
+        NNN[3]=nome[3];          
+    }
 
 }
 
-int età(int anni){      //va bene
-    vettore anni;
+int età(vettore anni){      //va bene
     vettore anni2;
     anni2[0]=anni[2];
     anni2[1]=anni[3];
@@ -80,24 +84,44 @@ int mese(){
 
 }
 
-int giorno(){
-
-
-}
 
 int Controllo(){
 
     
 }
 
+void InserimentoDati(vettore anni, int giorno){     //va bene
+    int cntAnno=0;
+    bool genere=0;
+    do{
+        if(cntAnno==0){Printf("Inserisci l'anno di nascita\n");}
+        scanf("%d", anni[cntAnno]);
+        cntAnno++;
+
+    }while(cntAnno<3);
+
+    do{
+        printf("Inserisci il sesso\n")
+        scanf("%d", &genere);
+    }while(genere!=0&&genere!=1);
+
+    do{
+        printf("Inserisci il giorno di nascita\n");
+        scanf("%d", &giorno);
+    }
+    if(genere==0){giorno=giorno+40};
+}       //va bene 
+
 
 int main(){
     string cognome;
     string nome;
+    vettore anni;
+    string NNN;
     int anno;
     char mese;
     int giorno;
-    string CodComune[]={71186}; //71=G in Ascii
+    vettore CodComune[]={71186}; //71=G in Ascii
     char Controllo;
 
 
