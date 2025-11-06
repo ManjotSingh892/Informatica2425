@@ -1,0 +1,56 @@
+<!--
+    1) Creiamo una text area dove inseriamo un messaggio
+    2) Creiamo una text area dove inseriamo un messaggio
+    3) Creiamo una div (w: 400px, h 300px bordo 1px solid balck)
+    4) Creiamo un pulsante che copi il messaggio scritto all'interno della div
+    5) Creiamo un pulsante che schiacciandolo colora iltesto nella div del colore inserito
+    6) Creiamo un pulsante che schiacciandolo aumenta la width della div
+    7) Creiamo un pulsante che schiacciandolo diminuisce la width della div
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forme geometriche con interazione</title>
+
+        <style>
+            cerchio{
+                margin-top: 20px;
+            }
+
+            quadrato{
+                margin-top: 60px;
+            }
+
+            tringolo{
+                margin-top: 100px;
+            }
+            
+
+        </style>
+
+        <script>
+            function triangolo(){
+                document.getElementById('triangolo').addEventListener('mouseover', function());
+                document.body.style.backgroundColor = 'purple';
+            }
+
+            function cerchio(){
+                document.getElementById('cerchio').addEventListener('mouseover', function());
+                document.body.style.backgroundColor = 'purple';
+            }
+
+            function quadrato(){
+                document.getElementById('quadrato').addEventListener('mouseover', function());
+                document.body.style.backgroundColor = 'purple';
+            }
+
+        </script>
+    </head>
+
+    <body> 
+            <div id="cerchio"><img src="../MEDIA/cerchio.png" onmouseover="cerchio"></div>
+            <div id="quadrato"><img src="../MEDIA/quadrato.png" onmouseover="quadrato"></div>
+            <div id="triangolo"><img src="../MEDIA/triangolo.png"  onmouseover="triangolo"></div>
+    </body>
+</html>
