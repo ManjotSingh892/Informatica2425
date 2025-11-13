@@ -1,0 +1,43 @@
+<!--
+    1) Creiamo una text area dove inseriamo un messaggio
+    2) Creiamo una text area dove inseriamo un messaggio
+    3) Creiamo una div (w: 400px, h 300px bordo 1px solid balck)
+    4) Creiamo un pulsante che copi il messaggio scritto all'interno della div
+    5) Creiamo un pulsante che schiacciandolo colora iltesto nella div del colore inserito
+    6) Creiamo un pulsante che schiacciandolo aumenta la width della div
+    7) Creiamo un pulsante che schiacciandolo diminuisce la width della div
+
+-->
+<!DOCTYPE html>
+<html>
+    <head><title>SOMMATORIA</title>
+        <script>
+            const input1=document.getElementById("num1");
+            const input2=document.getElementById("num2");
+            const bottone=document.getElementById("somma");
+            const risultato=documet.getElementById("risultato");
+
+            bottone.addEventListener("click", function(){
+                const valore1=parseFloat(input1.value);
+                const valore2=parseFloat(input2.value);
+
+                const somma=valore1+valore2;
+                risultato.textContent=somma;
+                
+
+            )}
+
+        </script>
+    
+    </head>
+
+    <body> 
+        <h2>Somma di due numeri</h2><br>
+
+        <input type="number" id="num1" palceholder="Inserisci il primo numero" name="num1">
+        <input type="number" id="num2" palceholder="Secondo numero" name="num2">
+        <button id="somma" value="Calcola Somma"></button><br><br>
+        <label>Risultato: </label><div id="risultato">0</div>
+
+    </body>
+</html>
