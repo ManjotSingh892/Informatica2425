@@ -22,4 +22,6 @@ void invertiStringa(stringa s, stringa str2){
     }
     str2[len]='\0';
     printf("la frase invertita e': %s", str2);
-}
+
+}   
+    

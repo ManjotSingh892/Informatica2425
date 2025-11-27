@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Esempio completo JavaScript</title>
+  <style>
+    /* Stile iniziale della pagina */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: white;
+    }
+
+    #area {
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+      margin: 20px auto;
+      line-height: 200px;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Demo JavaScript</h1>
+
+  <!-- Bottone per cambiare colore -->
+  <button onclick="cambiaColore()">Cambia colore della pagina</button>
+
+  <!-- Area per eventi del mouse -->
+  <div id="area">Passa il mouse qui!</div>
+
+  <script>
+    // ================================
+    // VARIABILI
+    // ================================
+    var nome = "Mario";       // vecchio metodo (sconsigliato)
+    let eta = 25;             // variabile modificabile
+    const piGreco = 3.14159;  // costante
+
+    console.log("Nome:", nome);
+    console.log("Età:", eta);
+    console.log("Pi Greco:", piGreco);
+
+    // ================================
+    // FUNZIONI
+    // ================================
+    function saluta() {
+      console.log("Ciao, benvenuto in JavaScript!");
+    }
+
+    function somma(a, b) {
+      return a + b;
+    }
+
+    const moltiplica = (x, y) => x * y;
+
+    saluta(); // esegue la funzione
+    console.log("Somma:", somma(3, 4));
+    console.log("Moltiplica:", moltiplica(5, 6));
+
+    // ================================
+    // INTERAZIONE CON LA PAGINA (DOM)
+    // ================================
+    function cambiaColore() {
+      // Cambia il colore di sfondo del body
+      document.body.style.backgroundColor = "lightblue";
+    }
+
+    // ================================
+    // EVENTI DEL MOUSE
+    // ================================
+    const area = document.getElementById("area");
+
+    // Quando il mouse entra nell'area
+    area.addEventListener("mouseover", () => {
+      area.style.backgroundColor = "green";
+      area.textContent = "Mouse dentro!";
+    });
+
+    // Quando il mouse esce dall'area
+    area.addEventListener("mouseout", () => {
+      area.style.backgroundColor = "gray";
+      area.textContent = "Passa il mouse qui!";
+    });
+
+    // Quando il mouse si muove dentro l'area
+    area.addEventListener("mousemove", () => {
+      area.style.backgroundColor = "orange";
+      area.textContent = "Mouse in movimento!";
+    });
+  </script>
+</body>
+</html>

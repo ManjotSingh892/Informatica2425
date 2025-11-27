@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INDOVINA IL NUMERO</title>
+            <style>
+            #output{
+                color: 
+            }
+            
+            </style>
+            <script>
+            function indovina(){
+                const num1=document.getElementById("num1");
+                const num2=50;
+                 
+                 const valore1 = parseFloat(input1.value) || 0;
+                 if(num1>num2){
+                    document.getElementById("output").style.color="red";
+                 }
+                 else if(num1<20){
+                    document.getElementById("output").style.color"yellow";
+                 }
+                 else if(num<10){
+                     document.getElementById("output").style.color"green";
+                 }
+            }
+            </script>
+    </head>
+    <body>
+        <input id="num1" type="number" placeholder="Primo numero">
+        <input type="button" value="Indovina il numero" onclick="indovina();">
+        <input type="button" value="hai indovinato?">
+    
+    
+    
+    </body>
+</html>
