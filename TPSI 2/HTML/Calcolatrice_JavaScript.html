@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calcolatrice</title>
+
+        <style>
+            body {
+                background-color: black;
+                margin: 0;
+                color: white;
+                font-family: Arial, sans-serif;
+            }
+
+            table {
+                background-color: dimgray;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            input[type="text"] {
+                background-color: black;
+                color: white;
+                border: 1px solid gray;
+                padding: 5px;
+            }
+
+            input[type="button"] {
+                background-color: gray;
+                border: 1px solid darkgray;
+                color: white;
+                padding: 10px;
+                margin: 3px;
+                cursor: pointer;
+            }
+
+            input[type="button"]:hover {
+                background-color: darkgray;
+            }
+        </style>
+
+        <script>
+            let str="", str1="", op="";
+
+            function tasto(v){
+                document.calc.display.value+=v;
+                str+=v;
+            }
+            function operat(p){
+                op = p;
+                document.calc.display.value="";
+                str1=eval(str);
+                str="";
+            }
+            function operaz(){
+                switch (op){
+                    case "+":
+                        document.calc.display.value =eval(str) + str1;
+                        break;
+                    case "-":
+                        document.calc.display.value =eval(str) - str1;
+                        break;
+                    case "*":
+                        document.calc.display.value =eval(str) * str1;
+                        break;
+                    case "/":
+                        document.calc.display.value =eval(str) / str1;
+                        break;
+                }
+            }
+            function Canc(){
+                document.calc.display.value =null;
+                str="";
+            }
+        </script>
+
+    </head>
+
+
+    <body>
+        <table border="3">
+            <tr><td>
+                <form name="calc">
+                    <br><br><h1>Casio</h1><br><br>
+                    <input type="text" name="display" value="" size="26"><br><br>
+                    <table border="2">
+                        <tr>
+                            <input type="button" value="1" onclick="tasto(this.value);">
+                            <input type="button" value="2" onclick="tasto(this.value);">
+                            <input type="button" value="3" onclick="tasto(this.value);">
+                            <input type="button" value="-" onclick="operat(this.value);"><br>
+                            <input type="button" value="4" onclick="tasto(this.value);">
+                            <input type="button" value="5" onclick="tasto(this.value);">
+                            <input type="button" value="6" onclick="tasto(this.value);">
+                            <input type="button" value="+" onclick="operat(this.value);"><br>
+                            <input type="button" value="7" onclick="tasto(this.value);">
+                            <input type="button" value="8" onclick="tasto(this.value);">
+                            <input type="button" value="9" onclick="tasto(this.value);">
+                            <input type="button" value="/" onclick="operat(this.value);"><br>
+                            <input type="button" value="0" onclick="tasto(this.value);">
+                            <input type="button" value="." onclick="tasto(this.value);">
+                            <input type="button" value="C" onclick="Canc();">
+                            <input type="button" value="*" onclick="operat(this.value);"><br>
+                            <input type="button" value="=" onclick="operaz();">
+                        </tr>
+                    </table>
+                </form>
+            </td></tr>
+        </table>
+    </body>
+</html>

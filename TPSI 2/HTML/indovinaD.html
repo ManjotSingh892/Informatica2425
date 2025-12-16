@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-        <head>
-            <title>Gioco indovina numero</title>
-        </head>
-
-            <script>
-                function indovina(){
-                const input1= document.getElementById("NumScelto");
-                const Numero= 100;
-                const Tentativi=5;
-                const Differenza=Math.abs(Numero-input1);
-                if((Differenza)>20){
-                document.getElementById("").style.color=color;
-                }
+    <head><title>Indovina numero</title>
+        <script>
+            var ind=12;
+            function resetta(){
+                document.getElementById("num").value = "";
+                document.bgcolor="white";
+            }
+            function check(){
+                if(Math.abs(parseFloat(document.getElementByid("num").value - ind)>30)||Math.abs(parseFloat(document.getElementByid("num").value - ind)<30)){
+                document.bgColor="red";
                 }
 
-
-
-            </script>
-        <body>
-            <input id="NumScelto" type="number" placeholder="Indovina il numero"><br>
-            <input type="button" value="invio" onclick="indovina();"><br>
-        </body>
+                if(Math.abs(parseFloat(document.getElementByid("num").value - ind)>15)||Math.abs(parseFloat(document.getElementByid("num").value - ind)<15)){
+                document.bgColor="yellow";
+                }
+               
+                if(Math.abs(parseFloat(document.getElementByid("num").value - ind)>5)||Math.abs(parseFloat(document.getElementByid("num").value - ind)<5)){
+                document.bgColor="green";
+                }             
+            }
+        </script>
+    </head>
+    <body>
+        <label>Inserisci il numero : </label>
+        <input type="text" id="num" value="">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="controlla numero inserito" onclick="check();">&nbsp;&nbsp;
+        <input type="button" value="Reset" onclick="resetta();">
+    </body>
 </html>
-
-
-
-
-
-

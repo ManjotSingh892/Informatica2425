@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Calcolatrice</title>
+   <script>
+    const numeroAttuale = ""; 
+    const numeroSalvato = 0;     
+    const operazione = null;     
+    function aggiornaSchermo(testo) {
+      document.getElementById("schermo").textContent = testo;
+    }
+    function premiNumero(n) {
+      numeroAttuale = numeroAttuale + n;
+      aggiornaSchermo(numeroAttuale);
+    }
+    function premiOperazione(op) {
+      if (numeroAttuale !== "") {
+        numeroSalvato = parseFloat(numeroAttuale);
+        numeroAttuale = "";
+      }
+      operazione = op;
+      aggiornaSchermo(op);
+    }
+    function calcolaRisultato() {
+      const secondoNumero = parseFloat(numeroAttuale);
+      const risultato = 0;
+      if (operazione === "+") {
+        risultato = numeroSalvato + secondoNumero;
+      } else if (operazione === "-") {
+        risultato = numeroSalvato - secondoNumero;
+      }
+      aggiornaSchermo(risultato);
+      numeroAttuale = String(risultato);
+      numeroSalvato = 0;
+      operazione = null;
+    }
+    function pulisci() {
+      numeroAttuale = "";
+      numeroSalvato = 0;
+      operazione = null;
+      aggiornaSchermo(0);
+    }
+  </script>
+</head>
+<body>
+  <h2>Calcolatrice</h2>
+  <button onclick="premiNumero('1')">1</button>
+  <button onclick="premiNumero('2')">2</button>
+  <button onclick="premiNumero('3')">3</button>
+  <br>
+  <button onclick="premiNumero('4')">4</button>
+  <button onclick="premiNumero('5')">5</button>
+  <button onclick="premiNumero('6')">6</button>
+  <br>
+  <button onclick="premiNumero('7')">7</button>
+  <button onclick="premiNumero('8')">8</button>
+  <button onclick="premiNumero('9')">9</button>
+  <br>
+  <button onclick="premiNumero('0')">0</button>
+  <button onclick="premiOperazione('+')"> + </button>
+  <button onclick="premiOperazione('-')"> - </button>
+  <br>
+  <button onclick="calcolaRisultato()"> = </button>
+  <button onclick="pulisci()"> Cancella </button>
+</body>
+</html>
