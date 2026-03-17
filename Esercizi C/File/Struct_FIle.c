@@ -19,15 +19,15 @@ int main(){
 
     for(int i=0; i<n; i++){
         printf("Inserisci il nome\n");
-        fget(persone.nome, stdin, 50);
+        fget(persone->nome, stdin, 50);
 
         printf("Inserisci il cognome\n");
-        fget(persone.cognome, stdin, 50);
+        fget(persone->cognome, stdin, 50);
 
         printf("Inserisci il nome\n");
-        scanf("%d", &persone.eta);
+        scanf("%d", &persone->eta);
 
-        fprintf(file,"%s %s %d", persone.nome, persone.cognome, persone.eta);
+        fprintf(file,"%s %s %d", persone->nome, persone->cognome, persone->eta);
     }
 
 
