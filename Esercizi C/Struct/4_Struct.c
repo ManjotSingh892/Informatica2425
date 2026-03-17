@@ -65,7 +65,7 @@ void Cerca(Libri libri[], int n){
 
 void Rimozione(Libri libri[], int n){
     for(int i=0;i<n;i++){
-        
+
     }
 
 }
