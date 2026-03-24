@@ -9,13 +9,15 @@ int main(){
     float media=0;
 
     if(file==NULL){
-
         printf("Errore apertura file\n");
         return 1;
     }
     fscanf("file", "%s %d %f", nome, &eta, &media);
-    printf("Nome: %s Età: %d Media: %.2f", nome, eta, media);
+    
+    printf("Nome: %s Età: %d Media: %.2f", nome,eta,media);
+
     fclose(file);
+    return 0;
 
 
 }
